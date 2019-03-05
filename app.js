@@ -17,7 +17,15 @@ var budgetController = (function() {
         this.id = id;
         this.description = description;
         this.value = value;
-    }
+    };
+    var calculateTotal = function(type){
+        var sum = 0;
+        data.allItems[type].forEach(function(cur){
+
+            sum+= cur.value;
+        });
+
+    };
 
     // var allExpenses = [];
     // var allIncomes = [];
@@ -54,10 +62,10 @@ var budgetController = (function() {
             return newItem;
 
         },
-        testing: function(){
-            console.log('Data Structure ');
-            console.log(data);
-        }
+
+        calculateBudget: function() {
+
+        },
     }
 
 
